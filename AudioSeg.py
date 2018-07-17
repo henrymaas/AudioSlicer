@@ -31,24 +31,18 @@ def rising_edges(binary_signal):
 
 # Process command line arguments
 
-parser = argparse.ArgumentParser(description='Split a WAV file at silence.')
-#parser.add_argument('input_file', type=str, help='The WAV file to split.')
-#parser.add_argument('--output-dir', '-o', type=str, default='.', help='The output folder. Defaults to the current folder.')
-#parser.add_argument('--min-silence-length', '-m', type=float, default=3., help='The minimum length of silence at which a split may occur [seconds]. Defaults to 3 seconds.')
-#parser.add_argument('--silence-threshold', '-t', type=float, default=1e-6, help='The energy level (between 0.0 and 1.0) below which the signal is regarded as silent. Defaults to 1e-6 == 0.0001%.')
-#parser.add_argument('--step-duration', '-s', type=float, default=None, help='The amount of time to step forward in the input file after calculating energy. Smaller value = slower, but more accurate silence detection. Larger value = faster, but might miss some split opportunities. Defaults to (min-silence-length / 10.).')
-#parser.add_argument('--dry-run', '-n', action='store_true', help='Don\'t actually write any output files.')
+#parser = argparse.ArgumentParser(description='Split a WAV file at silence.')
 
-#Últimos Valores Aceitáveis
+#Last Acceptable Values
 #min_silence_length = 0.3
 #silence_threshold = 1e-3
 #step_duration = 0.03/10
 
 # Declaração dos Valores dos Argumentos
-input_file = 'D:\\Python\\AudioSeg\\AudioSeg\\samples\\asample.wav'
-min_silence_length = 0.6
-silence_threshold = 1e-4
-step_duration = 0.03/10
+input_file = ''
+min_silence_length = 0.6  # The minimum length of silence at which a split may occur [seconds]. Defaults to 3 seconds.
+silence_threshold = 1e-4  # The energy level (between 0.0 and 1.0) below which the signal is regarded as silent.
+step_duration = 0.03/10   # The amount of time to step forward in the input file after calculating energy. Smaller value = slower, but more accurate silence detection. Larger value = faster, but might miss some split opportunities. Defaults to (min-silence-length / 10.).
 
 
 input_filename = input_file
@@ -58,7 +52,7 @@ if step_duration is None:
 else:
     step_duration = step_duration
 
-output_dir = 'D:\\Python\\AudioSeg\\AudioSeg\\samples'
+output_dir = ''
 output_filename_prefix = os.path.splitext(os.path.basename(input_filename))[0]
 dry_run = False
 
