@@ -26,5 +26,5 @@ tqdm (4.23.4)
 
 
 <h2> Usage </h2>
-To run this code, just change the path of the <b>input_file</b> and <b>output_ir</b>.
+To run this code, just change the path of the <b>input_file</b> and <b>output_dir</b>.
  
