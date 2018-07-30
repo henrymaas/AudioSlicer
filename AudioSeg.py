@@ -90,6 +90,9 @@ window_energy = (energy(w) / max_energy for w in tqdm(
 window_silence = (e > silence_threshold for e in window_energy)
 
 cut_times = (r * step_duration for r in rising_edges(window_silence))
+video_sub = {str(i) : [str(GetTime(((cut_samples[i])/sample_rate))), 
+                       str(GetTime(((cut_samples[i+1])/sample_rate)))] 
+             for i in range(len(cut_samples) - 1)}
 
 # This is the step that takes long, since we force the generators to run.
 print("Finding silences...")
@@ -112,3 +115,6 @@ for i, start, stop in tqdm(cut_ranges):
         )
     else:
         print("Not writing file {}".format(output_file_path))
+        
+with open (output_dir+'\\'+output_filename_prefix+'.json', 'w') as output:
+    json.dump(video_sub, output)
