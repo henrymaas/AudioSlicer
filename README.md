@@ -4,7 +4,7 @@ A simple Audio Slicer in Python which can sepparate .wav audio files into multip
 
 {"0": ["0:0:0", "0:0:3"], "1": ["0:0:3", "0:0:10"], "2": ["0:10:0", "0:0:22"], "3": ["0:0:22", "0:0:32"]}
 
-The code was taken from somewhere on GIT, but i lost the reference. I'll post it here as soon as i find it.
+The code was taken from <h2>/andrewphillipdoss.</h2> Thanks!
 
 The filename will also contains the parts when the video were sliced, ex.: sample01_0349_0401.wav
 
