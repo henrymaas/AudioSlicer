@@ -1,6 +1,8 @@
 # AudioSlicer
 
-A simple Audio Slicer in Python which can sepparate .wav audio files into multiple .wav samples, based on silence detection. Also, it dumps a .json that contains the periods of time in which the slice occours, in the following format: {sample nº : [cut start, cut end]}. Ex.:
+A simple Audio Slicer in Python which can split .wav audio files into multiple .wav samples, based on silence detection. Also, it dumps a .json that contains the periods of time in which the slice occours, in the following format: 
+
+{sample nº : [cut start, cut end]}. Ex.:
 
 {"0": ["0:0:0", "0:0:3"], "1": ["0:0:3", "0:0:10"], "2": ["0:10:0", "0:0:22"], "3": ["0:0:22", "0:0:32"]}
 
