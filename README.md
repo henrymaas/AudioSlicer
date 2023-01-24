@@ -17,15 +17,15 @@ It will also needs to learn to detect 'breathing noises' from the dictator and r
 
 
 
-<h2> Python 3.6 - Libraries </h2>
+<h2> Python 3.11.0 </h2>
 
-pydub (0.22.1)
+numpy (1.24.1)
 
-scypi (1.1.0)
+scypi (1.10.0)
 
-tqdm (4.23.4)
+tqdm (4.64.1)
 
 
 <h2> Usage </h2>
-To run this code, just change the path of the <b>input_file</b> and <b>output_dir</b>.
+To run this code, just change the path of the <b>input_file</b> and <b>output_dir</b> inside the code.
  
