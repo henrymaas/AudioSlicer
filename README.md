@@ -28,4 +28,7 @@ tqdm (4.64.1)
 
 <h2> Usage </h2>
 To run this code, just change the path of the <b>input_file</b> and <b>output_dir</b> inside the code.
- 
+<br/><br/>
+:exclamation:Ps: Please note that in order for your audio file to be cut into samples, it should contain periods of "silence". If you are trying to extract voice samples from a song, for example, it may not work as expected.
+<br /><br />
+Depending on the level of noise in your audio, the algorithm may skip the silence windows, resulting in missed cuts. Ensure that your audio is free from unwanted noise and that the silences are clearly defined. You can adjust the parameters of <b>min_silence_length</b>, <b>silence_threshold</b>, and <b>step_duration</b> to modify the length, amplitude, and duration of the silence window in order to better match your audio
